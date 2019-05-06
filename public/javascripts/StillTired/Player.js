@@ -1,3 +1,4 @@
+var coinE = false
 function player(px,py){
     this.x = px
     this.y = py
@@ -26,15 +27,16 @@ function player(px,py){
     this.eatCoin = function (posx, posy) {
         var distance = dist(this.x, this.y, posx, posy)
         if(distance <= 20){
-            newCoin.xpos = Math.random() *590
-            newCoin.ypos = Math.random() * 590
+            coinE = true
+            console.log(distance)
+            newCoin.xpos = Math.random() *550
+            newCoin.ypos = Math.random() * 550
             this.score += 1
             console.log(this.score)
         }
         var sc = textSize(32);
         sc.text(this.score, 10, 30);
         sc.fill(88, 24, 69);
-
     }
 
 }

@@ -4,7 +4,7 @@ function setup() {
 	createCanvas(600, 600);
 	var socket = io.connect('http://localhost:5000');
 	newPlayer = new player(random(500),random(500))
-	newCoin = new coin(Math.random() * 590, Math.random() * 591)
+	newCoin = new coin(Math.random() * 550, Math.random() * 550)
 	var data =
 		{
 			x: newPlayer.x,
@@ -18,8 +18,8 @@ function setup() {
 }
 
 function draw() {
-	background(181, 238, 245)
-	for(var i = 0; i < players.length; i++)
+	background(54, 172, 146)
+	for(var i = 0; i < players.length-1; i++)
 	{
 		text(players[i].id)
 		fill(255)
@@ -47,6 +47,7 @@ function coin(x, y){
 	this.show = function () {
 		fill(253, 228, 11)
 		rect(this.xpos,this.ypos, this.hie,this.wid)
+
 	}
 
 }

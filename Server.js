@@ -14,6 +14,7 @@ var player
 var pList = []
 
 var socket = require('socket.io')
+var socketURL = 'http://0.0.0.0:5000';
 var io = require('socket.io').listen(server);
 server.listen(5000);
 
@@ -21,13 +22,14 @@ setInterval(updateList, 1000);
 
 function updateList(){
    io.sockets.emit('updateList', pList)
+    console.log(pList)
 
 }
 
 io.sockets.on('connection', function(socket){
     console.log('a user connected:', socket.id);
     socket.on('start',  function (data) {
-        console.log(socket.id+" " + data.x+ " " + data.y)
+        console.log(socket.id+"this is the x: " + data.x+ "this is the y: " + data.y)
         pList.push(new player(socket.id, data.x, data.y))
 
     });
