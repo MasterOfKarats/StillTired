@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>StillTired</title>
+	<script src='http://localhost:5000/socket.io/socket.io.js'>
+	</script>
+	<script type="text/javascript">
+
+		var socket = io.connect('http://localhost:5000');
+		socket.on('connect',function(){
+
+			console.log("connect");
+		});
+		socket.on('start',  function(data) {
+			console.log("start")
+		});
+	</script>
+	<script src="javascripts/StillTired/libraries/p5.js"></script>
+	<script src="javascripts/StillTired/libraries/p5.dom.js"></script>
+	<script src="javascripts/StillTired/libraries/p5.sound.js"></script>
+	<script src="javascripts/StillTired/sketch.js"></script>
+	<script src="javascripts/StillTired/Player.js"></script>
+	<script src="javascripts/StillTired/Movement.js"></script>
+
+
+	<style>
+		body {
+			margin:0;
+			padding:0;
+			overflow: hidden;
+		}
+		canvas {
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "stilltired",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.15.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "phaser": "^3.16.2",
+    "pug": "2.0.0-beta11",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
+  },
+  "main": "Server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
