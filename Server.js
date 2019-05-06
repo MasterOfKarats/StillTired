@@ -10,6 +10,7 @@ function player(id,x,y)
 var app = require('express')();
 app.use(express.static('public'))
 var server = require('http').Server(app);
+var player
 var pList = []
 
 var socket = require('socket.io')
